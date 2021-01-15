@@ -34,29 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-// Psuedocode
-// Player 1 - clicks square
-// onClick =
-//     getID = player1Moves.push(id)
-// turn.push()
-// if player1 clicks, disable cursor / click
-// evaluate if winCombos.includes(player1Moves)
-// if so, won!, else continue game
-
-// [repeat for player2]
-// turn = [2]
-
-// let player1Moves = [2, 6, 9, 5]
-// let player2Moves = [4, 8, 15, 3]
-
-// [2, 6, 9, 5] != [2, 6, 10, 14]
-
-// loop through, evaluation each of the four.includes()
-
-// win[9]
-
-// player1Moves.sort().toString().concat()
-
-
-
-// let winCombos = { [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], }
+function checkWin() {
+    let wins = [
+        [1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16], [1, 5, 9, 13], [2, 6, 10, 14], [3, 7, 11, 15], [4, 8, 12, 16], [1, 6, 11, 16], [4, 7, 10, 13]
+    ]
+}

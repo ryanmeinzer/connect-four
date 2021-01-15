@@ -1,8 +1,8 @@
-.container {
+.grid {
     display: grid;
     grid-template-columns: auto auto auto auto; 
 }
-.item {
+.square {
     border: 1px solid black;
     text-align: center;
 }

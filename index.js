@@ -4,7 +4,6 @@ let player2Array = []
 
 document.addEventListener('DOMContentLoaded', () => {
     let squares = document.querySelectorAll('.grid div')
-    let result = document.querySelector('#result')
     let displayCurrentPlayer = document.querySelector('#current-player')
     let currentPlayer = 1
     let displayPlayer1Moves = document.querySelector('#player-1-moves')
@@ -42,10 +41,12 @@ function checkWin(player1Array, player2Array) {
     // alert('in checkWin')
     for (let i = 0; i < wins.length; i++) {
         if (player1Array.includes(wins[i][0]) && player1Array.includes(wins[i][1]) && player1Array.includes(wins[i][2]) && player1Array.includes(wins[i][3])) {
-            alert('player 1 won')
+            alert('Player 1 Won')
+            location.reload();
         }
         if (player2Array.includes(wins[i][0]) && player2Array.includes(wins[i][1]) && player2Array.includes(wins[i][2]) && player2Array.includes(wins[i][3])) {
-            alert('player 2 won')
+            alert('Player 2 Won')
+            location.reload();
         }
     }
 }

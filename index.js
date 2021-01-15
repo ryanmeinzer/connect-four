@@ -35,15 +35,13 @@ function checkWin(player1Array, player2Array) {
     let wins = [
         [1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16], [1, 5, 9, 13], [2, 6, 10, 14], [3, 7, 11, 15], [4, 8, 12, 16], [1, 6, 11, 16], [4, 7, 10, 13]
     ]
-
-    alert('in checkWin')
-
+    // alert('in checkWin')
     for (let i = 0; i < wins.length; i++) {
-        if (player1Array.includes(wins[i][0])) {
+        if (player1Array.includes(wins[i][0]) && player1Array.includes(wins[i][1]) && player1Array.includes(wins[i][2]) && player1Array.includes(wins[i][3])) {
             alert('player 1 won')
         }
-        // if (player2Array.includes(wins[i][0]) && player1Array.includes(wins[i][1]) && player1Array.includes(wins[i][2]) && player1Array.includes(wins[i][3])) {
-        //     alert('player 2 won')
-        // }
+        if (player2Array.includes(wins[i][0]) && player2Array.includes(wins[i][1]) && player2Array.includes(wins[i][2]) && player2Array.includes(wins[i][3])) {
+            alert('player 2 won')
+        }
     }
 }

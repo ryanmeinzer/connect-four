@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < squares.length; i++) {
         squares[i].onclick = function () {
             alert('hi')
+            if (currentPlayer === 1) {
+                currentPlayer = 2
+                displayCurrentPlayer.innerHTML = currentPlayer
+            } else {
+                currentPlayer = 1
+                displayCurrentPlayer.innerHTML = currentPlayer
+            }
+
+
+
+
         }
     }
 

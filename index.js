@@ -13,12 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < squares.length; i++) {
         squares[i].onclick = function (e) {
             if (currentPlayer === 1) {
+                if (checkDuplicate(e, player1Array, player2Array)) {
+                    return alert('Duplicate move, try again')
+                }
                 player1Array.push(parseInt(e.target.id))
                 displayPlayer1Moves.innerHTML = player1Array
                 checkWin(player1Array, player2Array)
                 currentPlayer = 2
                 displayCurrentPlayer.innerHTML = currentPlayer
             } else {
+                if (checkDuplicate(e, player1Array, player2Array)) {
+                    return alert('Duplicate move, try again')
+                }
                 player2Array.push(parseInt(e.target.id))
                 displayPlayer2Moves.innerHTML = player2Array
                 checkWin(player1Array, player2Array)
@@ -27,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-
-
 })
 
 function checkWin(player1Array, player2Array) {
@@ -43,5 +47,11 @@ function checkWin(player1Array, player2Array) {
         if (player2Array.includes(wins[i][0]) && player2Array.includes(wins[i][1]) && player2Array.includes(wins[i][2]) && player2Array.includes(wins[i][3])) {
             alert('player 2 won')
         }
+    }
+}
+
+function checkDuplicate(e, player1Array, player2Array) {
+    if (player1Array.includes(parseInt(e.target.id)) || player2Array.includes(parseInt(e.target.id))) {
+        return true
     }
 }
